@@ -1,4 +1,4 @@
-# System Architecture Draft
+# System Architecture
 
 ```mermaid
 flowchart LR
@@ -10,11 +10,8 @@ flowchart LR
   D --> G["Logs and debugging"]
 ```
 
-## ROS 2 Mapping Idea
+## Notes
 
-- camera pipeline -> image topic
-- target decision -> target-state topic or service
-- main loop -> control node
-- actuator commands -> actuator interface
-- logs -> observability and fault-recovery notes
-
+- Camera and OpenCV processing provide the main perception input.
+- GPIO, I2C, serial, and actuator libraries connect the Raspberry Pi control program to motors, servos, and release mechanisms.
+- The hardware-bound script should be tested on the robot platform, while the small Python demos in `src/` are only for understanding command flow on a desktop.

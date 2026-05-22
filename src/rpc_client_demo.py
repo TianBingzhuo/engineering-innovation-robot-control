@@ -1,7 +1,4 @@
-"""Synthetic RPC-style actuator command demo.
-
-This is a public-safe placeholder and does not include robot private code.
-"""
+"""Small actuator-command dispatch demo."""
 
 from dataclasses import dataclass
 
@@ -32,4 +29,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

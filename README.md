@@ -1,12 +1,12 @@
 # Engineering Innovation Robot Control
 
-Clean public archive for an intelligent rescue / engineering-innovation robot control project. The repository contains a Raspberry Pi control script, public-safe control-service demos, and CAD part files for the mechanical mechanism.
+工程创新智能救援机器人控制系统
 
-## One-Sentence Summary
+This repository records software and mechanical artifacts from an intelligent rescue robot project for the "Intelligence+" track of the Hebei Provincial College Student Engineering Practice and Innovation Ability Competition.
 
-A Raspberry Pi-based rescue robot can be described as a control stack connecting camera processing, color or target recognition, GPIO/I2C hardware access, actuator commands, mechanism design, and debugging loops.
+本仓库整理的是工创赛智能救援赛项相关资料：Raspberry Pi控制脚本、OpenCV识别逻辑、GPIO/I2C/串口硬件接口、执行机构控制，以及部分机械结构CAD文件。
 
-## Public Technical Framing
+## System Overview
 
 ```text
 camera input
@@ -18,19 +18,15 @@ camera input
   -> logs and debugging
 ```
 
-## Current Evidence Boundary
+## Repository Layout
 
-- The project is related to the Intelligent Rescue event in the "Intelligence+" track of the Hebei Provincial College Student Engineering Practice and Innovation Ability Competition.
-- The repository keeps a cleaned public snapshot of the robot control script and CAD parts.
-- Raw reports, registration forms, team information, and private photos/videos are not published here.
-- Public pages focus on system architecture, self-written control logic, and mechanism artifacts.
-
-## Public Source Code
-
-- `src/robot_control.py`: Raspberry Pi robot control script from the competition archive.
-- `src/control_service.py`: a public-safe control-service sketch with command normalization and fail-safe structure.
-- `src/rpc_client_demo.py`: a synthetic RPC-style control demo.
-- `hardware/cad/`: SolidWorks part files for mechanism components.
+| Path | Description |
+|---|---|
+| `src/robot_control.py` | Raspberry Pi robot control script from the competition project. |
+| `src/control_service.py` | Desktop-friendly command normalization and fail-safe control sketch. |
+| `src/rpc_client_demo.py` | Small command-dispatch demo. |
+| `docs/system-architecture.md` | Control architecture notes. |
+| `hardware/cad/` | SolidWorks part files for mechanism components. |
 
 Run:
 
@@ -41,7 +37,10 @@ python src/control_service.py
 
 `src/robot_control.py` targets Raspberry Pi hardware and is not expected to run on a normal desktop machine without GPIO, camera, serial, and actuator devices.
 
-## Public Artifacts
+## Team And Copyright
 
-- `docs/system-architecture.md`: control-stack diagram.
-- `docs/source-release-plan.md`: release boundary and cleanup notes.
+This project was completed in a team competition setting. The award and engineering results belong to the collaborative work of the participating students. Team members contributed to robot software, mechanism design, hardware integration, testing, documentation, and on-site debugging.
+
+本项目为团队竞赛成果。代码、机构、硬件集成、调试、文档和现场测试都包含队友贡献。本仓库由田秉卓维护，用于整理其中可公开复盘的工程内容；后续如需补充更精确的成员署名或贡献说明，应以团队共识为准。
+
+Unless otherwise stated, code and documents authored for this repository are released under the Apache License 2.0. Third-party libraries, hardware SDKs, and vendor materials retain their original licenses.

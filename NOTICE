@@ -1,10 +1,10 @@
-OS and Robotics System Software Portfolio
-Copyright 2026 Tian Bingzhuo
+Engineering Innovation Robot Control
+Copyright 2026 Tian Bingzhuo and project contributors
 
-This repository contains cleaned public documentation and self-written demo
-source code for an academic portfolio around operating-system foundations,
-embedded systems, and robotics system software.
+This repository documents a team engineering-innovation competition project.
+The robot software, mechanism, hardware integration, testing, documentation,
+and on-site debugging were completed collaboratively.
 
-The repository intentionally excludes raw certificates, transcripts, private
-forms, team-member information, raw media, vendor SDK packages, build products,
-model files, and unreleased original project archives.
+Unless otherwise stated, source code and documentation authored for this
+repository are released under the Apache License 2.0. Third-party libraries,
+hardware SDKs, and vendor materials retain their original licenses.
