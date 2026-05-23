@@ -21,20 +21,11 @@ camera input
 
 | Path | Description |
 |---|---|
-| `src/robot_control.py` | Raspberry Pi robot control script from the competition project. |
-| `src/control_service.py` | Desktop-friendly command normalization and fail-safe control sketch. |
-| `src/rpc_client_demo.py` | Small command-dispatch demo. |
+| `src/robot_control.py` | Original integrated Raspberry Pi robot control script from the competition project. |
 | `docs/system-architecture.md` | Control architecture notes. |
 | `hardware/cad/` | SolidWorks part files for mechanism components. |
 
-Run:
-
-```bash
-python src/rpc_client_demo.py
-python src/control_service.py
-```
-
-`src/robot_control.py` targets Raspberry Pi hardware and is not expected to run on a normal desktop machine without GPIO, camera, serial, and actuator devices.
+`src/robot_control.py` targets Raspberry Pi hardware and is not expected to run on a normal desktop machine without GPIO, camera, serial, and actuator devices. The repository keeps the original integrated code instead of splitting it into simplified demo modules.
 
 ## Team And Copyright
 
