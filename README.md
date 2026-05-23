@@ -6,6 +6,14 @@ This repository records software and mechanical artifacts from an intelligent re
 
 本仓库整理的是工创赛智能救援赛项相关资料：Raspberry Pi 控制脚本、OpenCV 识别逻辑、GPIO/I2C/串口硬件接口、执行机构控制，以及部分机械结构 CAD 文件。
 
+## Competition Task Context
+
+The robot was built for the intelligent rescue event, where two teams run one robot each on the same field. The robot must start autonomously, complete at least one ordinary rescue target into its own safety zone, and then continue collecting ordinary, core, and dangerous targets under the scoring and collision rules.
+
+这个赛项的核心不是简单巡线或遥控小车，而是“同场对抗 + 自主先手 + 救援目标转移”：机器人需要识别目标颜色和位置，把普通、核心、危险救援目标转移进本方安全区，同时避免进入对方安全区、长时间碰撞和恶意阻挡等违规行为。
+
+See [docs/competition-task.md](docs/competition-task.md) for field layout, target types, match flow, scoring logic, and how those requirements map to the code and mechanism design.
+
 ## System Overview
 
 ```text
@@ -22,6 +30,7 @@ camera input
 | Path | Description |
 |---|---|
 | `src/robot_control.py` | Original integrated Raspberry Pi robot control script from the competition project. |
+| `docs/competition-task.md` | Competition task, field, scoring, and engineering constraints. |
 | `docs/system-architecture.md` | Control architecture notes. |
 | `hardware/cad/` | SolidWorks part files for mechanism components. |
 
