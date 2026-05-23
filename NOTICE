@@ -2,8 +2,22 @@ Engineering Innovation Robot Control
 Copyright 2026 Tian Bingzhuo and project contributors
 
 This repository documents a team engineering-innovation competition project.
-The robot software, mechanism, hardware integration, testing, documentation,
-and on-site debugging were completed collaboratively.
+The award and engineering result were completed collaboratively.
+
+Known contribution split:
+
+- Wang Shuo and Zhang Jiayu: mechanical structure fabrication and mechanism
+  bring-up.
+- Su Yuxuan: vision/perception code, including camera and OpenCV recognition
+  logic.
+- Tian Bingzhuo: all non-vision software work, including Raspberry Pi main
+  control flow, GPIO/I2C/serial interfaces, actuator logic, manual/automatic
+  control modes, integration debugging, and public repository maintenance.
+
+During the original competition period, part of the non-vision software was
+drafted or debugged with assistance from the then-available ChatGPT. Codex was
+not available at that time and was not part of the original competition
+development.
 
 Unless otherwise stated, source code and documentation authored for this
 repository are released under the Apache License 2.0. Third-party libraries,
