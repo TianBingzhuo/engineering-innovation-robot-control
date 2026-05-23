@@ -6,6 +6,16 @@ This repository records software and mechanical artifacts from an intelligent re
 
 本仓库整理的是工创赛智能救援赛项相关资料：Raspberry Pi 控制脚本、OpenCV 识别逻辑、GPIO/I2C/串口硬件接口、执行机构控制，以及部分机械结构 CAD 文件。
 
+## Project At A Glance
+
+| Item | Summary |
+|---|---|
+| Competition | 2025 China College Student Engineering Practice and Innovation Ability Competition, "Intelligence+" intelligent rescue event. |
+| System type | Raspberry Pi based rescue robot control system with camera perception, actuator control, and manual/autonomous mode handling. |
+| Repository focus | Public-safe code and mechanism artifacts that explain the control chain. |
+| My role | Non-vision software: main control flow, GPIO/I2C/serial interfaces, actuator logic, manual/automatic modes, integration debugging, and repository maintenance. |
+| Not included | Private competition packages, teammate-private files, unreviewed media, build/runtime artifacts, and third-party binary tools. |
+
 ## Competition Task Context
 
 The robot was built for the intelligent rescue event, where two teams run one robot each on the same field. The robot must start autonomously, complete at least one ordinary rescue target into its own safety zone, and then continue collecting ordinary, core, and dangerous targets under the scoring and collision rules.
@@ -13,6 +23,10 @@ The robot was built for the intelligent rescue event, where two teams run one ro
 这个赛项的核心不是简单巡线或遥控小车，而是“同场对抗 + 自主先手 + 救援目标转移”：机器人需要识别目标颜色和位置，把普通、核心、危险救援目标转移进本方安全区，同时避免进入对方安全区、长时间碰撞和恶意阻挡等违规行为。
 
 See [docs/competition-task.md](docs/competition-task.md) for field layout, target types, match flow, scoring logic, and how those requirements map to the code and mechanism design.
+
+## Visual Materials
+
+No project photos or screenshots are included in this public repository yet. This README intentionally avoids placeholder images; real mechanism or field photos can be added later after teammate, privacy, and competition-material review.
 
 ## System Overview
 
@@ -30,11 +44,19 @@ camera input
 | Path | Description |
 |---|---|
 | `src/robot_control.py` | Original integrated Raspberry Pi robot control script from the competition project. |
+| `docs/contribution-scope.md` | Team contribution split, public repository scope, and attribution notes. |
 | `docs/competition-task.md` | Competition task, field, scoring, and engineering constraints. |
 | `docs/system-architecture.md` | Control architecture notes. |
 | `hardware/cad/` | SolidWorks part files for mechanism components. |
 
 `src/robot_control.py` targets Raspberry Pi hardware and is not expected to run on a normal desktop machine without GPIO, camera, serial, and actuator devices. The repository keeps the original integrated code instead of splitting it into simplified demo modules.
+
+## Suggested Reading Order
+
+1. [docs/competition-task.md](docs/competition-task.md) for the task and scoring context.
+2. [docs/system-architecture.md](docs/system-architecture.md) for the control/data flow.
+3. [docs/contribution-scope.md](docs/contribution-scope.md) for authorship and public-scope boundaries.
+4. [src/robot_control.py](src/robot_control.py) for the original integrated robot script.
 
 ## Team And Copyright
 
